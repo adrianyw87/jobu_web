@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+/* INFOLINE */
+.infoLine{
+    width: 100%;
+    height: 3vh;
+    background-color: black;
+}
+/* NAVBAR */
+.navBar-wrapper{
+    width: 100%;
+    height: 7vh;
+    background-color: gray;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logoLetras-wrapper{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+}
+.navBar{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+}
+/* HOME */
+.home-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: beige;
+}
+/* ABOUT */
+.about-wrapper{
+    width: 100%;
+    height: 60vh;
+    background-color: blanchedalmond;
+}
+/* PLANNING */
+.planning-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: burlywood;
+}
+/* CONTACT */
+.contact-wrapper{
+    width: 100%;
+    height: 60vh;
+    background-color: cornsilk;
+}
+/* FOOTER */
+.footer-wrapper{
+    width: 100%;
+    height: 20vh;
+    background-color: black;
+}
