@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jobuweb": {
+    "jobu": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/jobuweb",
+            "outputPath": "dist/jobu",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "jobuweb:build"
+            "browserTarget": "jobu:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "jobuweb:build:production"
+              "browserTarget": "jobu:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jobuweb:build"
+            "browserTarget": "jobu:build"
           }
         },
         "test": {
@@ -109,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "jobuweb:serve"
+            "devServerTarget": "jobu:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "jobuweb:serve:production"
+              "devServerTarget": "jobu:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "jobuweb"
+  "defaultProject": "jobu"
 }
