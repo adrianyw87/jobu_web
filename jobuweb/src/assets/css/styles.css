@@ -19,6 +19,11 @@ body{
 html {
     scroll-behavior: smooth;
 }
+img{
+    border: 0;    
+    text-decoration: none;
+    outline-style: none;
+}
 /* INFOLINE */
 .infoLine{
     width: 100%;
@@ -83,7 +88,79 @@ html {
 .home-wrapper{
     width: 100%;
     height: 100vh;
+    min-height: 650px;
+    background-color: #85c4c3; 
+    /* cmyk(55, 8, 30, 0) rgb(153, 195, 194) */
+    /* color cajita texto: rgba(171, 222, 222, 0.15) #abdede cmyk(48, 0, 22, 0) */
+}
+.homeLayout{
+    position:relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logoHome{
+    width: 100%;
+    height: 220px;
+    background-image: url('../img/LogoHome.png');
+    background-repeat: no-repeat;
+    background-size: contain;  
+    background-position: center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 2;    
+}
+.homeImage{
+    width: 100%;
+    height: 88vh;
+    background-image: url('../img/FondoHome.jpg');
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: center;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.homeTextArea{
+    position: absolute;
+    width: 50%;
+    min-width: 940px;
+    min-height: 120px;
+    height: auto;
     background-color: beige;
+    z-index: 3;
+    top:215px;
+    font-family: 'Syke';    
+    text-align: center;
+    background-color: rgba(171, 222, 222, 0.3);
+}
+.homeText{
+    padding: 10px 0;
+    font-size: 20px;
+    /* font-weight: bold; */
+}
+.squares{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.square1, .square2, .square3,.square4{
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/BoxSquare.png');
+    background-size: contain; 
+    background-position: center;
+}
+.square2{
+    transform: rotate(90deg);
+}
+.square3{
+    transform: rotate(-90deg);
+}
+.square4{
+    transform: rotate(-180deg);
 }
 /* ABOUT */
 .about-wrapper{
@@ -96,7 +173,7 @@ html {
 }
 .textArea{
     width: 30%;
-    min-width: 450px;
+    min-width: 250px;
     height: auto;
     background-color: white;
     margin: 50px 0px;
@@ -157,7 +234,7 @@ html {
     background-color: black;
 }
 /* QUERY */
-@media (max-width: 920px) {
+@media (max-width: 1020px) {
     /* PLANNING */
     .planning-wrapper{
         height: auto;
@@ -169,6 +246,18 @@ html {
         justify-content: center;
         align-items: center;
         margin: 0px auto;
+    }
+    /* HOME */
+    .logoHome{
+        height: 150px;
+    }
+    .homeTextArea {
+        width: 50%;
+        top: 180px;
+        min-width: 640px;
+    }
+    .homeTextArea p {
+        font-size: 16px;
     }
 }
 @media (max-width: 850px) {
@@ -201,6 +290,7 @@ html {
         justify-content: space-around;
         align-items: center;
         padding-left: 0px;
+        padding-bottom: 10px;
     }
     .navBar ul li{
         font-size: 1rem;
@@ -211,12 +301,25 @@ html {
     }
     .textArea p{
         font-size: 16px;
-        width: 90%;        
-        min-width: 150px;
-    }    
+        width: 90%;
+    }
+     /* HOME */
+     .home-wrapper{
+         max-height: 700px;
+     }
+     .homeTextArea {
+        width: 80%;
+        top: 160px;
+        min-width: 480px;
+    }
+    .homeImage{
+        height: 150vh;
+        max-height: 600px;
+        background-position: bottom;
+    }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
 
     /* NAVBAR */
     .navBar-wrapper{  
@@ -232,4 +335,21 @@ html {
         width: 50%;        
         min-width: 150px;
     } 
+    /* HOME */
+    .home-wrapper{
+        min-height: 550px;
+        max-height: 550px;
+    }
+    .logoHome{        
+        height: 100px;
+    }
+    .homeTextArea {
+        width: 90%;
+        top: 120px;
+        min-width: 140px;
+    }
+    .homeImage{   
+        height: 85vh;  
+        max-height: 500px;              
+    }
   }
