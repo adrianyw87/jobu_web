@@ -1,1 +1,55 @@
-<div class="contact-wrapper" id="contact"></div>
+<div class="contact-wrapper" id="contact">
+    <div class="contactTitle">            
+        <div class="aboutTitleDecoration1">
+            <div class="decoration1"></div>
+            <div class="decoration2"></div>
+        </div>
+        <p>Contacto</p>
+        <div class="aboutTitleDecoration2">
+            <div class="decoration1"></div>
+            <div class="decoration2"></div>
+        </div>
+    </div>    
+    <div style="display: flex;flex-direction: column; position: relative;justify-content: flex-start;align-items: center;height: auto;">        
+        <div class="contactTextArea">
+            <div class="squares">
+                <div class="square1"></div>
+                <div class="square2"></div>
+            </div>
+            <div style="width: 100%;text-align: center;color: white;padding: 0 5px;display: flex;justify-content: center;font-weight: bold;">
+                <p>Reserva ahora llamando al 6555 55 55 o contáctanos a través del formulario.</p>
+            </div>
+            <div class="contactBox">
+                <form #newProjectForm="ngForm" (ngSubmit)="onSubmit(newProjectForm)">
+                    <p>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" required/>
+                        <span class="formError" *ngIf="false"> El nombre es obligatorio</span>
+                    </p>
+                    <p>
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" name="apellidos" required/>
+                        <span class="formError" *ngIf="false"> Los apellidos es obligatorio</span>
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" required/>
+                        <span class="formError" *ngIf="false"> El email es obligatorio</span>
+                    </p>
+                    <p>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" required></textarea>
+                        <span class="formError" *ngIf="false"> El mensaje es obligatorio</span>
+                    </p>   
+                </form>            
+            </div>
+            <div class="squares">
+                <div class="square3"></div>
+                <div class="square4"></div>
+            </div>
+        </div>  
+        <div style="width: 40%;display: flex;justify-content: flex-end;">
+            <input type="submit" value="Enviar" [disabled]="!newProjectForm.valid"/>
+        </div>             
+    </div>
+</div>

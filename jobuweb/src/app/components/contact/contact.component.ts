@@ -12,4 +12,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(form){
+    console.log("pulsado");
+  }
+
 }

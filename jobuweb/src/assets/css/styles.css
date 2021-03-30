@@ -15,12 +15,13 @@
 body{
     margin: 0px;
     padding: 0px;
+    background: #85c4c3;
 }
 html {
     scroll-behavior: smooth;
 }
 img{
-    border: 0;    
+    border: 0;
     text-decoration: none;
     outline-style: none;
 }
@@ -32,7 +33,7 @@ img{
 }
 /* NAVBAR */
 .navBar-wrapper{
-    width: 100%;  
+    width: 100%;
 
     display: flex;
     justify-content: space-between;
@@ -59,9 +60,9 @@ img{
 }
 .navBar{
     width: 100%;
-    height: 100%; 
+    height: 100%;
     display: flex;
-    justify-content: flex-end;   
+    justify-content: flex-end;
 }
 .navBar ul{
     width: 80%;
@@ -76,65 +77,72 @@ img{
     font-family: Syke;
     cursor: pointer;
 }
-.navBar ul li a{ 
+.navBar ul li a{
     text-decoration: none;
     color:white;
-    transition: all 300ms;
+    transition: all 500ms;
 }
-.navBar ul li a:hover{ 
-    color: bisque;
+.navBar ul li a:hover{
+    color: #85c4c3;
 }
 /* HOME */
 .home-wrapper{
-    width: 100%;
+    width: 70%;
     height: 100vh;
-    min-height: 650px;
-    background-color: #85c4c3; 
+    min-height: 800px;
+    background-color: #85c4c3;
+    display: flex;
+    justify-content: center;
+    margin: auto;    
     /* cmyk(55, 8, 30, 0) rgb(153, 195, 194) */
     /* color cajita texto: rgba(171, 222, 222, 0.15) #abdede cmyk(48, 0, 22, 0) */
 }
-.homeLayout{
-    position:relative;
+.homeImage{
     width: 100%;
+    height: 220vh;
+    min-height: 1800px; 
+    background-image: url('../img/FondoJunto.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 .logoHome{
     width: 100%;
     height: 220px;
     background-image: url('../img/LogoHome.png');
     background-repeat: no-repeat;
-    background-size: contain;  
+    background-size: contain;
     background-position: center;
     position: absolute;
     top: 20px;
-    left: 0;
-    z-index: 2;    
+    left: 0;   
+    animation: fadeinLogo 4s; 
 }
-.homeImage{
-    width: 100%;
-    height: 88vh;
-    background-image: url('../img/FondoHome.jpg');
-    background-repeat: no-repeat;
-    background-size: contain; 
-    background-position: center;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@keyframes fadeinLogo {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
+
 .homeTextArea{
     position: absolute;
     width: 50%;
-    min-width: 940px;
     min-height: 120px;
     height: auto;
     background-color: beige;
-    z-index: 3;
     top:215px;
-    font-family: 'Syke';    
+    font-family: 'Syke';
     text-align: center;
     background-color: rgba(171, 222, 222, 0.3);
+    animation: fadeinLogo 5s; 
 }
 .homeText{
     padding: 10px 0;
@@ -150,7 +158,7 @@ img{
     width: 20px;
     height: 20px;
     background-image: url('../img/BoxSquare.png');
-    background-size: contain; 
+    background-size: contain;
     background-position: center;
 }
 .square2{
@@ -162,108 +170,453 @@ img{
 .square4{
     transform: rotate(-180deg);
 }
+.gold{
+    background-image: url('../img/BoxSquareGold.png');
+}
 /* ABOUT */
 .about-wrapper{
     width: 100%;
-    height: 100vh;
-    background-color: blanchedalmond;
+    height:90vh;
+    background-color: #85c4c3;
+    margin-top: 210px;    
+}
+.aboutTitle{
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 20px;
 }
-.textArea{
+.aboutTitle p{
+    width: 300px;
+    color: rgba(28,101,100, 1);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+    font-size: 40px;
+    font-weight: 100;
+    font-family: 'Syke';
+    text-align: center;
+    margin: auto 0;
+    z-index: 10;
+}
+.aboutTitleDecoration1{
     width: 30%;
-    min-width: 250px;
-    height: auto;
-    background-color: white;
-    margin: 50px 0px;
+    height: inherit;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    font-family: Syke;
+    align-items: flex-end;
+    margin-top: 10px;
+    z-index: 10;
 }
-.textArea p{
-    color: black;
-    font-size: 18px;
+.aboutTitleDecoration2{
+    width: 30%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+    z-index: 10;
+}
+.decoration1{
+    height: 3px;
+    width: 75%;
+    max-width: 500px;
+    background: rgba(212, 236, 234, 0.6);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.decoration2{
+    height: 6px;
+    width: 75%;
+    max-width: 500px;
+    background: rgba(212, 236, 234, 0.6);
+}
+.aboutTextArea{
+    width: 60%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    top:215px;
+    font-family: 'Syke';
+    text-align: center;
+    margin-top:50px;
+    z-index: 11;
+}
+.aboutText{
+    padding: 10px 30px;
+    font-size: 24px;
+}
+.loto1{
+    width: 500px;
+    height: 200px;
+    background-image: url('../img/FlorLoto.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    position: absolute;
+    top: -15%;
+    left: 5%;
+}
+.loto2{
+    width: 500px;
+    height: 200px;
+    background-image: url('../img/FlorLoto.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    position: absolute;
+    bottom: -15%;
+    right: 5%;
 }
 /* PLANNING */
 .planning-wrapper{
     width: 100%;
-    height: 100vh;
-    background-color: burlywood;
+    height: auto;
+    min-height: 950px;
+    background-color: #85c4c3;
+    background-image: url('../img/FondoTuPlan.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .planningTitle{
     width: 100%;
+    height: 50px;
+    padding-top: 50px;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
 }
-.planningTitle h1{
-    color: black;
-    padding-top: 20px;
+.planningTitle p{
+    width: 150px;
+    color: rgba(28,101,100, 1);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+    font-size: 40px;
+    font-weight: 100;
+    font-family: 'Syke';
+    text-align: center;
+    margin: auto 0;
+    z-index: 10;
 }
 .planningList{
-    width: 70%;
+    width: 90%;
     height: 80%;
-    background-color: white;
-    margin: 10px auto;
+    background-color: transparent;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 15px;
+    padding-top: 25px;
     padding-bottom: 15px;
 }
 .planning{
-    width: 25%;
-    height: 200px;    
-    min-width: 300px;
-    background-color: aquamarine;
+    width: 430px; 
+    height: 400px;
     margin: 10px;
+}
+.plan1{
+    background-image: url('../img/Paquete.PNG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.plan2{
+    background-image: url('../img/Paquete2.PNG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.plan3{
+    background-image: url('../img/Paquete3.PNG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.plan4{
+    background-image: url('../img/Paquete4.PNG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.plan5{
+    background-image: url('../img/Paquete5.PNG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 /* CONTACT */
 .contact-wrapper{
     width: 100%;
-    height: 75vh;
-    background-color: cornsilk;
+    height: auto;
+    background-color: #85c4c3;
+    /* background-image: url('../img/FondoTuPlan.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;   */
 }
+.contactTitle{
+    width: 100%;
+    height: 50px;    
+    display: flex;
+    justify-content: center;
+}
+.contactTitle p{
+    width: 180px;
+    color: rgba(28,101,100, 1);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+    font-size: 40px;
+    font-weight: 100;
+    font-family: 'Syke';
+    text-align: center;
+    margin: auto 0;
+    z-index: 10;
+}
+.contactTextArea{
+    width: 50%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    top:215px;
+    font-family: 'Syke';
+    text-align: center;
+    margin: 0 auto;
+    margin-top:50px;
+    z-index: 11;
+}
+.contactTextArea p{
+    color:black;
+    font-size: 20px;
+    font-family: 'Syke';
+}
+.contactBox{
+    width: 100%;
+    height: auto;
+    /* background-image: url('../img/CajaContacto.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; */
+}
+/* FORMULARIO */
+form{
+    width: 50%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form p{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+}
+form label{   
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-family: 'Syke';
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea{
+    width: 80%;
+    padding: 10px;
+}
+
+input[type="submit"]{
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: white;
+    background: rgba(53, 103, 164, 1);
+    border: 2px solid rgb(70, 118, 160);
+    cursor: pointer;
+    border-radius: 10px;
+}
+input[type="submit"]:hover{
+    background: rgba(53, 103, 164, 0.8);
+}
+
+input[disabled]{
+    background: #ccc;
+    opacity: 0.4;
+    cursor:not-allowed;
+    border:none;
+}
+textarea{
+    height: 120px;
+}
+
+.formError{
+    font-size: 14px;
+    padding: 3px;
+    background: red;
+    color:white;
+    margin-left: 5px;
+}
+
+.message{
+    width: 40%;
+    padding: 15px;
+    border: 1px solid #eee;
+}
+
+.message a {
+    color:white;
+
+}
+
+.succes{
+    background: green;
+    color:white;
+
+}
+
+.failed{
+    background: red;
+    color:white;
+}
+
+.confirm{
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
 /* FOOTER */
 .footer-wrapper{
     width: 100%;
-    height: 20vh;
+    height: 12vh;
     background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerLogo{
+    min-width: 200px;
+    height: 100px;
+    background-image: url('../img/LogoLetras.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+}
+.footerInfoList{
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+}
+.footerInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icono{
+    width: 50px;
+    height: 50px;
+}
+.tfno{
+    background-image: url('../img/Telefono.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.mail{
+    background-image: url('../img/Correo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 20px;
+}
+.linkd{
+    background-image: url('../img/Linkedin.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 60px;
+}
+.ig{
+    background-image: url('../img/Instagram.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 20px;
+}
+.footerInfo p{
+    color:white;    
+    font-size: 24px;
+    margin: 0px 10px;
 }
 /* QUERY */
+@media (max-width: 1300px) {
+    /* ABOUT */
+    .aboutTextArea{
+        width: 80%;
+    }
+    .loto1{
+        width: 300px;
+        height: 80px;
+        top: 0;
+        left: 30px;
+    }
+    .loto2{
+        width: 300px;
+        height: 80px;
+        bottom: 0;
+        right: 30px;
+    }
+    /* PLANNING */
+    .planning-wrapper{
+        height: auto;
+    }  
+    /* CONTACTO */
+    .contactTextArea p{
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    /* FORM */
+    form{
+        width: 90%;        
+    }
+}
 @media (max-width: 1020px) {
     /* PLANNING */
     .planning-wrapper{
         height: auto;
         padding-bottom: 30px;
     }
-    .planningList{        
+    .planningList{
         width: 90%;
         height: auto;
         justify-content: center;
         align-items: center;
         margin: 0px auto;
-    }
-    /* HOME */
-    .logoHome{
-        height: 150px;
-    }
+    }     
+    /* HOME   */
     .homeTextArea {
-        width: 50%;
-        top: 180px;
-        min-width: 640px;
-    }
-    .homeTextArea p {
-        font-size: 16px;
-    }
+        width: 75%;        
+    }     
+    /* CONTACT */
+    .contactTextArea{
+        width: 70%;
+    }    
+    /* FOOTER */
+    .footer-wrapper{
+        height: auto;
+        flex-direction: column;
+        padding-bottom: 20px;
+    } 
+    .footerInfoList {
+        width: 90%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }    
 }
 @media (max-width: 850px) {
 
     /* NAVBAR */
-    .navBar-wrapper{  
+    .navBar-wrapper{
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -272,14 +625,14 @@ img{
     .navBar {
       width: 100%;
       padding-bottom: 0px;
-      padding-left: 0px; 
-      justify-content: center;   
-    }   
+      padding-left: 0px;
+      justify-content: center;
+    }
     .logoLetras-wrapper{
         width: 100%;
         justify-content: center;
         padding-left: 0;
-    } 
+    }
     .logoLetras{
         width: 180px;
         height: 60px;
@@ -295,34 +648,77 @@ img{
     .navBar ul li{
         font-size: 1rem;
     }
+    /* HOME */
+    .logoHome{
+        height: 100px;
+    }
+    .homeTextArea {
+        width: 85%;
+        top: 10%;
+    } 
+    .homeTextArea p {
+        font-size: 20px;
+    }
     /* ABOUT */
-    .textArea{
-        width: 80%;
-    }
-    .textArea p{
-        font-size: 16px;
-        width: 90%;
-    }
-     /* HOME */
-     .home-wrapper{
-         max-height: 700px;
-     }
-     .homeTextArea {
-        width: 80%;
-        top: 160px;
-        min-width: 480px;
-    }
-    .homeImage{
-        height: 150vh;
+    .about-wrapper{
+        margin-top: 0;
+        min-height: 600px;
         max-height: 600px;
-        background-position: bottom;
+    }
+    .aboutText{
+        font-size: 18px;
+    }
+     /* PLANNING */
+     .planning-wrapper{
+        background-image: url('../img/FondoTuPlanLittle.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+     .planning-wrapper{
+        height: auto;
+    }      
+    /* CONTACT */
+    form label {
+        font-size: 16px;
+    }
+    input[type="text"], input[type="number"], input[type="email"], textarea {        
+        padding: 5px;
+    }
+    textarea{
+        height: 80px;
+    }
+    /* CAMBIO IMAGEN   */
+    .homeImage{
+        background-image: url('../img/FondoJuntoLittle.png');
+        background-size: auto;
+        background-position: center;
+        height: 180vh;
+        min-height: 1400px;
+    }
+    .home-wrapper{
+        min-height: 750px;
+    }
+    /* FOOTER */
+    .footerInfo{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .mail{
+        margin-left: 10px;
+    }
+    .linkd{
+        margin-left: 10px;
+    }
+    .ig{
+        margin-left: 10px;
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
 
     /* NAVBAR */
-    .navBar-wrapper{  
+    .navBar-wrapper{
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -332,24 +728,29 @@ img{
         flex-wrap: wrap;
     }
     .textArea p{
-        width: 50%;        
+        width: 50%;
         min-width: 150px;
-    } 
+    }
     /* HOME */
-    .home-wrapper{
-        min-height: 550px;
-        max-height: 550px;
+    .homeTextArea{
+        top:10%;
     }
-    .logoHome{        
-        height: 100px;
+    /* ABOUT */
+    .about-wrapper{
+        height: 750px;
+        max-height: 750px;
     }
-    .homeTextArea {
-        width: 90%;
-        top: 120px;
-        min-width: 140px;
+    .aboutTitle p{
+        font-size: 30px;
     }
-    .homeImage{   
-        height: 85vh;  
-        max-height: 500px;              
+    .decoration1{
+        margin-top: 0px;
+    }
+    /* FORM */
+    .contactTextArea{
+        width: 95%;
+    }
+    form{
+        width: 80%;
     }
   }
